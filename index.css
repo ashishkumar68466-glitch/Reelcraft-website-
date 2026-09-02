@@ -1,0 +1,51 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply bg-void text-paper font-body antialiased;
+  font-feature-settings: "ss01" on;
+}
+
+::selection {
+  background-color: #d7263d;
+  color: #f5f3ef;
+}
+
+/* Visible, deliberate focus ring for keyboard navigation */
+a:focus-visible,
+button:focus-visible,
+[tabindex]:focus-visible {
+  outline: 2px solid #d7263d;
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+/* Tabular, timecode-style numerals used throughout the design */
+.tnum {
+  font-variant-numeric: tabular-nums;
+}
+
+/* Hide scrollbar on the mobile portfolio rail, keep it scrollable */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
