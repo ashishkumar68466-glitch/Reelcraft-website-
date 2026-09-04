@@ -1,4 +1,4 @@
-import Navbar from './components/Navbar.jsx'
+import Navbar from "./Navbar.jsx";
 import Hero from './components/Hero.jsx'
 import Stats from './components/Stats.jsx'
 import Services from './components/Services.jsx'
